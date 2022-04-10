@@ -34,7 +34,7 @@ const JoinGame = (props) => {
     const { gameid } = useParams()
     JoinGameRoom(gameid, props.userName, props.isCreator)
     return <div>
-        <h1 style = {{textAlign: "center"}}><strong>Welcome to Chess with Friend!</strong></h1>
+        <h1 style = {{textAlign: "center"  }}><strong>Welcome to Chess with Friend!</strong></h1>
     </div>
 }
 

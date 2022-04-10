@@ -1,8 +1,10 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
 import uuid from 'uuid/v4'
-import { ColorContext } from '../context/colorcontext' 
+import { ColorContext } from '../context/colorcontext'
+import  "./style.css"
 const socket  = require('../connection/socket').socket
+
 
 /**
  * Onboard is where we create the game room.
@@ -50,7 +52,8 @@ class CreateNewGame extends React.Component {
     render() {
         // !!! TODO: edit this later once you have bought your own domain. 
 
-        return (<React.Fragment>
+        
+        return ( <div className="backk" >
             {
                 this.state.didGetUserName ? 
 
@@ -58,7 +61,7 @@ class CreateNewGame extends React.Component {
 
             :
                <div>
-                    <h1 style={{textAlign: "center", marginTop: String((window.innerHeight / 3)) + "px"}}>Your Username:</h1>
+                    <h1 style={{textAlign: "center",  top:"100px", padding:"80px",  marginTop: String((window.innerHeight / 3)) + "px"}}>Enter Your Name:</h1>
 
                     <input style={{marginLeft: String((window.innerWidth / 2) - 120) + "px", width: "240px", marginTop: "62px"}} 
                            ref = {this.textArea}
@@ -80,7 +83,7 @@ class CreateNewGame extends React.Component {
                         }}>Submit</button>
                 </div>
             }
-            </React.Fragment>)
+            </div>  )
     }
 }
 
