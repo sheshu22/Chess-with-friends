@@ -61,7 +61,8 @@ class CreateNewGame extends React.Component {
 
             :
                <div>
-                    <h1 style={{textAlign: "center",  top:"100px", padding:"80px",  marginTop: String((window.innerHeight / 3)) + "px"}}>Enter Your Name:</h1>
+                   <h1></h1>
+                    <h1 style={{textAlign: "center",  top:"100px", padding:"80px",  marginTop: String((window.innerHeight / 3)) + "px"}}>CHESS WITH FRIENDS <br></br><br></br>Enter Your Name:</h1>
 
                     <input style={{marginLeft: String((window.innerWidth / 2) - 120) + "px", width: "240px", marginTop: "62px"}} 
                            ref = {this.textArea}
@@ -71,9 +72,7 @@ class CreateNewGame extends React.Component {
                         style = {{marginLeft: String((window.innerWidth / 2) - 60) + "px", width: "120px", marginTop: "62px"}} 
                         disabled = {!(this.state.inputText.length > 0)} 
                         onClick = {() => {
-                            // When the 'Submit' button gets pressed from the username screen,
-                            // We should send a request to the server to create a new room with
-                            // the uuid we generate here.
+                            
                             this.props.didRedirect() 
                             this.props.setUserName(this.state.inputText) 
                             this.setState({
