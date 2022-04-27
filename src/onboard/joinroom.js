@@ -49,7 +49,7 @@ class JoinRoom extends React.Component {
                         style = {{marginLeft: String((window.innerWidth / 2) - 60) + "px", width: "120px", marginTop: "62px"}} 
                         disabled = {!(this.state.inputText.length > 0)} 
                         onClick = {() => {
-                            .
+
                             this.setState({
                                 didGetUserName: true
                             })
